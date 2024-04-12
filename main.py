@@ -170,7 +170,7 @@ class MainApp(QMainWindow, FORM_CLASS):
                     self.database_dictionary[detected_sentance][f"{item}"].mfcc_list)
             else:
                 database_features.append(
-                    self.database_dictionary[item]["MariamM"].mfcc_list)
+                    self.database_dictionary[item]["Mina"].mfcc_list)
         similarity_score = analyzer.euclidean_distance_measure(
             database_features, self.spectrogram.mfcc_list)
 
