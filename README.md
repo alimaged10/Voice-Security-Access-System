@@ -42,6 +42,7 @@ The UI includes the following elements:
 
 4. Mode 2 - Correct passcode sentence with incorrect speaker (Threshold for the speaking speaker must be less than 8500):
    Although the (Open the door threshold was met, but the speaker threshold wasn't met, therefore the access is denied)
+   
    ![image](https://github.com/alimaged10/Voice-Security-Access-System/assets/115377600/ca4a6b52-2ae9-4908-90cf-e1d7cb095be0)
 
 
