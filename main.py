@@ -107,14 +107,14 @@ class MainApp(QMainWindow, FORM_CLASS):
         super(MainApp, self).__init__(parent)
         self.setupUi(self)
         self.database_dictionary = {
-            "OpenTheDoor": {'mariamH': [], 'mariamM': [], 'ali': [], 'mina': [], 'ahmed': [], 'hazem': [], 'nourhan': [], 'mayar': []},
-            "UnlockMiddleGate": {'mariamH': [], 'mariamM': [], 'ali': [], 'mina': [], 'ahmed': [], 'hazem': [], 'nourhan': [], 'mayar': []},
-            "GiveMeAccess": {'mariamH': [], 'mariamM': [], 'ali': [], 'mina': [], 'ahmed': [], 'hazem': [], 'nourhan': [], 'mayar': []}
+            "OpenTheDoor": {'MariamH': [], 'MariamM': [], 'Ali': [], 'Mina': [], 'Ahmed': [], 'Hazem': [], 'Nourhan': [], 'Mayar': []},
+            "UnlockMiddleGate": {'MariamH': [], 'MariamM': [], 'Ali': [], 'Mina': [], 'Ahmed': [], 'Hazem': [], 'Nourhan': [], 'Mayar': []},
+            "GiveMeAccess": {'MariamH': [], 'MariamM': [], 'Ali': [], 'Mina': [], 'Ahmed': [], 'Hazem': [], 'Nourhan': [], 'Mayar': []}
         }
         self.similarity = []
         self.sentences = ["OpenTheDoor", "UnlockMiddleGate", "GiveMeAccess"]
-        self.people = ["mariamH", "mariamM", "ali",
-                       'mina', 'ahmed', 'hazem', 'nourhan', 'mayar']
+        self.people = ["MariamH", "MariamM", "Ali",
+                       'Mina', 'Ahmed', 'Hazem', 'Nourhan', 'Mayar']
 
         self.spectrogram = Record()
         self.spectogram_layout = QHBoxLayout(self.spectrogram_widget)
@@ -170,7 +170,7 @@ class MainApp(QMainWindow, FORM_CLASS):
                     self.database_dictionary[detected_sentance][f"{item}"].mfcc_list)
             else:
                 database_features.append(
-                    self.database_dictionary[item]["mariamM"].mfcc_list)
+                    self.database_dictionary[item]["MariamM"].mfcc_list)
         similarity_score = analyzer.euclidean_distance_measure(
             database_features, self.spectrogram.mfcc_list)
 
